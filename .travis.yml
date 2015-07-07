@@ -46,4 +46,5 @@ before_script:
   # Install WordPress
   - ./wp-cli.phar core install
 
-  - ls ./wordpress/
+  # Start server
+  - php -S wordpress.dev -t ~/wordpress
