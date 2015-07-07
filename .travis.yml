@@ -31,10 +31,6 @@ before_script:
   # Make sure WP-CLI is executable
   - chmod +x wp-cli.phar
 
-  # WordPress
-  - alias wp='./wp-cli.phar'
-  - pwd
-  
   # Check if WP-CLI works
   - php wp-cli.phar --info
 
@@ -45,9 +41,9 @@ before_script:
   - ./wp-cli.phar core config
 
   # Create database
-  - wp db create
+  - ./wp-cli.phar db create
 
   # Install WordPress
-  - wp core install
+  - ./wp-cli.phar core install
 
   - ls ./wordpress/
