@@ -12,6 +12,8 @@
 *	https://deliciousbrains.com/unit-test-wp-migrate-db-pro/
 *	https://pantheon.io/docs/guides/automated-testing-wordpress-behat/
 *	http://blog.wppusher.com/continuous-integration-with-wordpress-and-circleci/
+*	http://www.lornajane.net/posts/2012/php-5-4-built-in-webserver
+*	http://docs.travis-ci.com/user/languages/php/
 
 ### Tools
 

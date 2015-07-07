@@ -38,3 +38,8 @@ before_script:
 
   # Download WordPress into `wordpress` directory
   - ./wp-cli.phar core download --allow-root --path=wordpress
+
+  # Create wp-config.php
+  - ./wp-cli.phar core config
+
+  - cat wp-config.php
