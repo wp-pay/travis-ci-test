@@ -9,3 +9,10 @@ php:
   - 5.4
   - 5.3
   - 5.2
+
+before_script:
+  # Use cURL to fetch WP-CLI
+  - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+
+  # Check if WP-CLI works
+  - php wp-cli.phar --info
