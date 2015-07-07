@@ -1,0 +1,9 @@
+path: wordpress
+url: http://wordpress.dev
+user: admin
+
+core config:
+	dbuser: root
+	dbpass: 
+	extra-php: |
+		define( 'WP_DEBUG', true );
