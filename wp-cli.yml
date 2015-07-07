@@ -1,5 +1,5 @@
 path: wordpress
-url: http://wordpress.dev
+url: http://wordpress.dev:8080
 user: admin
 
 core config:
