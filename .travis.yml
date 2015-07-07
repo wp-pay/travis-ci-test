@@ -42,4 +42,4 @@ before_script:
   # Create wp-config.php
   - ./wp-cli.phar core config
 
-  - cat wp-config.php
+  - cat wordpress/wp-config.php
