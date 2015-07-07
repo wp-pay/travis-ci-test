@@ -3,7 +3,6 @@ sudo: false
 language: php
 
 php:
-  - 5.3
   - 5.4
   - 5.5
   - 7.0
@@ -43,4 +42,4 @@ before_script:
   - ./wp-cli.phar core install
 
   # Start server
-  - php -S 0.0.0.0 -t wordpress
+  - php -S 0.0.0.0:8080 -t wordpress
