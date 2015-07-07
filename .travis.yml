@@ -18,6 +18,9 @@ before_script:
   # Use cURL to fetch WP-CLI
   - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
+  # Make sure WP-CLI is executable
+  - chmod +x wp-cli.phar
+
   # Check if WP-CLI works
   - php wp-cli.phar --info
 
