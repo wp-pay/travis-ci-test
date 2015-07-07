@@ -42,4 +42,4 @@ before_script:
   - ./wp-cli.phar core install
 
   # Start server
-  - php -S 0.0.0.0:8080 -t wordpress
+  - php -S 0.0.0.0:8080 -t wordpress &
