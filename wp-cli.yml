@@ -8,3 +8,9 @@ core config:
 	dbname: wordpress
 	extra-php: |
 		define( 'WP_DEBUG', true );
+
+core install:
+	title: Test
+	admin_user: test
+	admin_password: test
+	admin_email: test@wordpress.dev

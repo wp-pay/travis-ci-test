@@ -25,11 +25,14 @@ before_script:
   - php --version
   - mysql --version
 
-  # Use cURL to fetch WP-CLI
-  - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+  # Download WP-CLI
+  - wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
   # Make sure WP-CLI is executable
   - chmod +x wp-cli.phar
+
+  # WordPress
+  - alias wp='wp-cli.phar'
 
   # Check if WP-CLI works
   - php wp-cli.phar --info
@@ -40,4 +43,10 @@ before_script:
   # Create wp-config.php
   - ./wp-cli.phar core config
 
-  - cat wordpress/wp-config.php
+  # Create database
+  - wp db create
+
+  # Install WordPress
+  - wp core install
+
+  - ls ./wordpress/
