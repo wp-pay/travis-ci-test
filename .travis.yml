@@ -33,7 +33,8 @@ before_script:
 
   # WordPress
   - alias wp='./wp-cli.phar'
-
+  - pwd
+  
   # Check if WP-CLI works
   - php wp-cli.phar --info
 
