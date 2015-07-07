@@ -23,3 +23,4 @@
 *	https://github.com/blobaugh/travis-ci-test
 *	https://github.com/benbalter/wordpress-plugin-tests
 *	https://github.com/jnicklas/capybara
+*	https://github.com/yiisoft/yii2/blob/master/.travis.yml

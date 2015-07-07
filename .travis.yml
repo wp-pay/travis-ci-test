@@ -23,6 +23,10 @@ addons:
     - wordpress.dev
 
 before_script:
+  # Version
+  - php --version
+  - mysql --version
+
   # Use cURL to fetch WP-CLI
   - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
