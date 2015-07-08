@@ -1,6 +1,9 @@
 # Build
 /build/
 
+# Selenium
+/selenium-server-standalone.jar
+
 # WordPress
 /wordpress/
 

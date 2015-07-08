@@ -43,3 +43,9 @@ before_script:
 
   # Server
   - php wp-cli.phar server &
+
+  # Download Selenium
+  - wget -O selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
+
+  # Start Selenium
+  - java -jar selenium-server-standalone.jar &
