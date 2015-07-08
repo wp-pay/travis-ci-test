@@ -32,7 +32,7 @@ PHP_SERVER_PID=$!
 wget -O selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
 
 # Start Selenium
-java -jar selenium-server-standalone.jar &
+xvfb-run java -jar selenium-server-standalone.jar &
 SELENIUM_SERVER_PID=$!
 
 wget --retry-connrefused --tries=60 --waitretry=1 http://127.0.0.1:4444/wd/hub/status -O /dev/null
