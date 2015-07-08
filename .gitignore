@@ -1,2 +1,9 @@
 # Build
 /build/
+
+# WordPress
+/wordpress/
+
+# WP-CLI
+/wp-cli.phar
+/wp-cli.local.yml
