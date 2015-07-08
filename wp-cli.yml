@@ -1,6 +1,6 @@
 path: wordpress
 url: http://wordpress.dev:8080
-user: admin
+user: test
 
 core config:
 	dbuser: root
@@ -14,3 +14,6 @@ core install:
 	admin_user: test
 	admin_password: test
 	admin_email: test@wordpress.dev
+
+server:
+	docroot: wordpress
