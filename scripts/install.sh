@@ -4,7 +4,7 @@
 rm -rf ./wordpress/
 
 # Download WP-CLI
-wget -O wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
+wget -o wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
 
 # Make sure WP-CLI is executable
 chmod +x wp-cli.phar
@@ -29,11 +29,18 @@ php wp-cli.phar server &
 PHP_SERVER_PID=$!
 
 # Download Selenium
-wget -O selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
+wget -o selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
 
 # Start Selenium
 java -jar selenium-server-standalone.jar &
 SELENIUM_SERVER_PID=$!
+
+wget --retry-connrefused --tries=60 --waitretry=1 --output-file=/dev/null http://127.0.0.1:4444/wd/hub/status
+if [ ! $? -eq 0 ]; then
+    echo "Selenium Server not started"
+else
+    echo "Finished setup"
+fi
 
 echo "PHP Server Process ID: $PHP_SERVER_PID"
 
