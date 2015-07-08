@@ -3,6 +3,8 @@
 class WebTest extends PHPUnit_Extensions_Selenium2TestCase {
 	/**
 	 * Setup
+	 *
+	 * @see https://github.com/giorgiosironi/phpunit-selenium/blob/master/Tests/Selenium2TestCaseTest.php
 	 */
 	protected function setUp() {
 		$this->setBrowser( 'firefox' );
@@ -13,17 +15,19 @@ class WebTest extends PHPUnit_Extensions_Selenium2TestCase {
 		$this->url( 'wp-admin' );
 
 		// Login
-		$form = $this->byId( 'loginform' );
+		$login_form = $this->byId( 'loginform' );
 
 		$this->byId( 'user_login' )->value( 'test' );
 		$this->byId( 'user_pass' )->value( 'test' );
 
- 		$form->submit();
+ 		$login_form->submit();
 
 		$this->assertStringStartsWith( 'Dashboard', $this->title() );
 
 		// New gateway
 		$this->url( 'wp-admin/post-new.php?post_type=pronamic_gateway' );
+		
+		$post_form = $this->byId( 'post' );
 
 		$this->byId( 'title' )->value( 'iDEAL Simulator - iDEAL Lite / Basic' );
 
@@ -36,6 +40,13 @@ class WebTest extends PHPUnit_Extensions_Selenium2TestCase {
 
 		$this->byId( '_pronamic_gateway_ideal_hash_key' )->value( 'Password' );
 
-		$this->byId( 'publish' )->click();
+		$post_form->submit();
+
+		// Check
+		$message = $this->byId( 'message' );
+
+		$classes = implode( ' ', $message->getAttribute( 'class' ) );
+
+		
 	}
 }
