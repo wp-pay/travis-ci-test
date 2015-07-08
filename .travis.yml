@@ -26,24 +26,20 @@ before_script:
   # Make sure WP-CLI is executable
   - chmod +x wp-cli.phar
 
-  - alias test="php wp-cli.phar"
-
-  - test --info
-
   # Check if WP-CLI works
   - php wp-cli.phar --info
 
   # Download WordPress into `wordpress` directory
-  - ./wp-cli.phar core download
+  - php wp-cli.phar core download
 
   # Create wp-config.php
-  - ./wp-cli.phar core config
+  - php wp-cli.phar core config
 
   # Create database
-  - ./wp-cli.phar db create
+  - php wp-cli.phar db create
 
   # Install WordPress
-  - ./wp-cli.phar core install
+  - php wp-cli.phar core install
 
   # Start server
   - php -S 0.0.0.0:8080 -t wordpress &
