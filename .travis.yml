@@ -41,5 +41,8 @@ before_script:
   # Install WordPress
   - php wp-cli.phar core install
 
+  # Server
+  - php wp-cli.phar server
+
   # Start server
   - php -S 0.0.0.0:8080 -t wordpress &
