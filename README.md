@@ -27,6 +27,7 @@
 *	https://github.com/benbalter/wordpress-plugin-tests
 *	https://github.com/jnicklas/capybara
 *	https://github.com/yiisoft/yii2/blob/master/.travis.yml
+*	https://github.com/cioddi/travis-ci-phpunit-selenium-template
 
 ### Stack Overflow
 

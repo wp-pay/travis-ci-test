@@ -19,6 +19,8 @@ addons:
   hosts:
     - wordpress.dev
 
+script: phpunit --verbose
+
 before_script:
   - composer install
   - bash ./scripts/install.sh
