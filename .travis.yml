@@ -20,4 +20,5 @@ addons:
     - wordpress.dev
 
 before_script:
+  - composer install
   - bash ./scripts/install.sh
