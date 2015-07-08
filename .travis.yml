@@ -21,7 +21,7 @@ addons:
 
 before_script:
   # Download WP-CLI
-  - download https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar wp-cli.phar
+  - wget -O wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar
 
   # Make sure WP-CLI is executable
   - chmod +x wp-cli.phar
@@ -42,7 +42,4 @@ before_script:
   - php wp-cli.phar core install
 
   # Server
-  - php wp-cli.phar server
-
-  # Start server
-  - php -S 0.0.0.0:8080 -t wordpress &
+  - php wp-cli.phar server &
