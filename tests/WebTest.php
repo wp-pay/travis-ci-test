@@ -8,6 +8,6 @@ class WebTest extends PHPUnit_Extensions_Selenium2TestCase {
 
 	public function testTitle() {
 		$this->url( 'http://localhost:8080/' );
-		$this->assertEquals( 'Test', $this->title() );
+		$this->assertEquals( 'Test | Just another WordPress site', $this->title() );
 	}
 }
