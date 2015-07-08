@@ -3,11 +3,11 @@
 class WebTest extends PHPUnit_Extensions_Selenium2TestCase {
 	protected function setUp() {
 		$this->setBrowser( 'firefox' );
-		$this->setBrowserUrl( 'http://www.example.com/' );
+		$this->setBrowserUrl( 'http://localhost:8080/' );
 	}
 
 	public function testTitle() {
-		$this->url( 'http://www.example.com/' );
-		$this->assertEquals( 'Example Domain', $this->title() );
+		$this->url( 'http://localhost:8080/' );
+		$this->assertEquals( 'Test', $this->title() );
 	}
 }
