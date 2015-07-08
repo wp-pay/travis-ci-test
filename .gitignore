@@ -1,6 +1,9 @@
 # Build
 /build/
 
+# Composer
+/vendor/
+
 # Selenium
 /selenium-server-standalone.jar
 
