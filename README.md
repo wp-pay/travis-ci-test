@@ -14,6 +14,7 @@
 *	http://blog.wppusher.com/continuous-integration-with-wordpress-and-circleci/
 *	http://www.lornajane.net/posts/2012/php-5-4-built-in-webserver
 *	http://docs.travis-ci.com/user/languages/php/
+*	http://knpuniversity.com/screencast/question-answer-day/travis-ci
 
 ### Tools
 
@@ -26,3 +27,8 @@
 *	https://github.com/benbalter/wordpress-plugin-tests
 *	https://github.com/jnicklas/capybara
 *	https://github.com/yiisoft/yii2/blob/master/.travis.yml
+
+### Stack Overflow
+
+*	http://stackoverflow.com/questions/1908610/how-to-get-pid-of-background-process
+*	http://unix.stackexchange.com/questions/104821/how-to-stop-a-background-process

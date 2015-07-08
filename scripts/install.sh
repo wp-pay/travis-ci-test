@@ -26,9 +26,15 @@ php wp-cli.phar core install
 
 # Server
 php wp-cli.phar server &
+PHP_SERVER_PID=$!
 
 # Download Selenium
 wget -O selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/2.46/selenium-server-standalone-2.46.0.jar
 
 # Start Selenium
 java -jar selenium-server-standalone.jar &
+SELENIUM_SERVER_PID=$!
+
+echo "PHP Server Process ID: $PHP_SERVER_PID"
+
+echo "Selenium Server Process ID: $SELENIUM_SERVER_PID"
