@@ -26,6 +26,10 @@ before_script:
   # Make sure WP-CLI is executable
   - chmod +x wp-cli.phar
 
+  - alias test="php wp-cli.phar"
+
+  - test --info
+
   # Check if WP-CLI works
   - php wp-cli.phar --info
 
