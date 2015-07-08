@@ -20,4 +20,4 @@ addons:
     - wordpress.dev
 
 before_script:
-  script: ./scripts/install.sh
+  - bash ./scripts/install.sh
