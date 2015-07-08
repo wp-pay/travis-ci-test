@@ -1,22 +1,23 @@
 <?php
 
 class WebTest extends PHPUnit_Extensions_Selenium2TestCase {
+	/**
+	 * Setup
+	 */
 	protected function setUp() {
 		$this->setBrowser( 'firefox' );
 		$this->setBrowserUrl( 'http://localhost:8080/' );
 	}
 
 	public function testTitle() {
-		$this->url( 'http://localhost:8080/' );
+		$this->url( 'wp-admin' );
 
-		$this->open( '/wp-admin/' );
+		$form = $this->byId( 'loginform' );
 
-		$this->type( 'id=user_login', 'test' );
-		$this->type( 'id=user_pass', 'test' );
+		$this->byId( 'user_login' )->value( 'test' );
+		$this->byId( 'user_pass' )->value( 'test' );
 
-		$this->click( 'id=wp-submit' );
-
-		$this->waitForPageToLoad( '30000' );
+ 		$form->submit();
 
 		$this->assertStringStartsWith( 'Dashboard', $this->title() );
 	}
